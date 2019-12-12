@@ -1,0 +1,12 @@
+.filter-summaries {
+  display: flex;
+  flex-direction: row;
+}
+
+.property-summaries {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 100vh;
+}

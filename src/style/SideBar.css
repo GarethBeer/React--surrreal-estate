@@ -1,0 +1,11 @@
+.sideBarContainer {
+  background-color: grey;
+  width: 200px;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}

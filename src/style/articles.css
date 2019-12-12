@@ -1,0 +1,35 @@
+.articles-container {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  width: 100%;
+  color: purple;
+
+  margin: 50px 0;
+}
+.articles {
+  display: flex;
+  flex-direction: row;
+}
+.article-item {
+  padding: 10px;
+
+  height: 100%;
+  text-align: center;
+}
+
+.article-item img {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
