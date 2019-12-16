@@ -1,9 +1,7 @@
 .sideBarContainer {
-  background-image: linear-gradient(to top, rgb(226, 134, 219), purple);
-  width: 200px;
-  height: 90%;
-  margin: auto 10px auto 0px;
-  border-radius: 10px;
+  /* background-image: linear-gradient(to left, rgb(224, 85, 213), rgb(70, 1, 70)); */
+
+  margin: 0 10px auto 0px;
 }
 
 .link-container {
@@ -17,7 +15,6 @@
   color: white;
 }
 
-.sideBarContainer link {
-  font-family: 'Nunito';
-  text-decoration: none;
+.link {
+  color: white;
 }

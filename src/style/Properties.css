@@ -10,5 +10,21 @@
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  height: 100vh;
+  height: 100%;
+}
+
+.filter-summaries button {
+  border-radius: 0;
+  width: 150px;
+  margin: 0px;
+  font-size: 20px;
+  background-image: linear-gradient(to left, rgb(224, 85, 213), rgb(70, 1, 70));
+}
+
+i {
+  color: white;
+}
+
+.sidebar {
+  background-image: linear-gradient(to left, rgb(224, 85, 213), rgb(70, 1, 70));
 }

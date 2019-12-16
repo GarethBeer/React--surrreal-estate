@@ -30,7 +30,7 @@
 
 .email {
   text-align: center;
-  background-image: linear-gradient(to left, rgb(226, 134, 219), purple);
+  background-image: linear-gradient(to left, rgb(224, 85, 213), rgb(70, 1, 70));
   width: 80%;
   height: 22px;
   border-radius: 2px;

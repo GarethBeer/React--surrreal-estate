@@ -5,7 +5,7 @@
   flex-wrap: wrap;
 
   height: 100%;
-  background-image: linear-gradient(to left, rgb(226, 134, 219), purple);
+  background-image: linear-gradient(to left, rgb(224, 85, 213), rgb(70, 1, 70));
 }
 .item-container {
   display: flex;

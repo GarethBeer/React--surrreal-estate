@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 
 import '../style/SideBar.css';
 
-const SideBar = () => {
+const Filter = () => {
   return (
     <div className="sideBarContainer">
-      <h2>Filter</h2>
       <div className="link-container">
-        <h3>City</h3>
         <Link to={`/?query={"city": "Manchester"}`} className="link">
           Manchester
         </Link>
@@ -22,12 +20,8 @@ const SideBar = () => {
           Sheffield
         </Link>
       </div>
-      <div className="link-container">
-        <h3>Price</h3>
-        <Link className="link">Link</Link>
-      </div>
     </div>
   );
 };
 
-export default SideBar;
+export default Filter;

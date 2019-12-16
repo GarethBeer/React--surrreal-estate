@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
-import SideBar from './SideBar';
+import Filter from './Filter';
+import Sort from './Sort';
 import PropertyCard from './PropertyCard';
 import '../style/Properties.css';
 
@@ -9,6 +10,10 @@ class Properties extends Component {
     super();
     this.state = {
       properties: [],
+      sidebar: {
+        filter: false,
+        sort: false,
+      },
     };
   }
 
@@ -31,10 +36,57 @@ class Properties extends Component {
     }
   }
 
+  handleFilter = event => {
+    if (!this.state.sidebar.filter) {
+      this.setState({
+        sidebar: {
+          filter: true,
+        },
+      });
+    } else {
+      this.setState({
+        sidebar: {
+          filter: false,
+        },
+      });
+    }
+  };
+
+  handleSort = event => {
+    if (!this.state.sidebar.sort) {
+      this.setState({
+        sidebar: {
+          sort: true,
+        },
+      });
+    } else {
+      this.setState({
+        sidebar: {
+          sort: false,
+        },
+      });
+    }
+  };
+
   render() {
     return (
       <div className="filter-summaries">
-        <SideBar />
+        <div className="sidebar">
+          <div>
+            <button onClick={this.handleFilter} type="button">
+              <i className="fas fa-filter" />
+              Filter
+            </button>
+            {this.state.sidebar.filter && <Filter />}
+          </div>
+          <div>
+            <button onClick={this.handleSort} type="button">
+              <i className="fas fa-sort" />
+              Sort
+            </button>
+            {this.state.sidebar.sort && <Sort />}
+          </div>
+        </div>
         <section className="property-summaries">
           {this.state.properties.map(property => (
             <PropertyCard
