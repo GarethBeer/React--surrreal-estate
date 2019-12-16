@@ -1,5 +1,5 @@
 .footerContainer {
-  background-color: purple;
+  background-image: linear-gradient(to left, rgb(226, 134, 219), purple);
   border-top: 3px solid grey;
   width: 100vw;
   height: 50px;

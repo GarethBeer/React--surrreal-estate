@@ -25,11 +25,12 @@
   font-size: 20px;
   margin: 2px 0px 12px 0px;
   width: 100%;
+  line-height: normal;
 }
 
 .email {
   text-align: center;
-  background-color: purple;
+  background-image: linear-gradient(to left, rgb(226, 134, 219), purple);
   width: 80%;
   height: 22px;
   border-radius: 2px;
