@@ -10,7 +10,7 @@ class AddProperty extends Component {
   constructor() {
     super();
     this.state = {
-      title: ' ',
+      title: '',
       type: 'Flat',
       bedrooms: 0,
       bathrooms: 0,
@@ -73,6 +73,7 @@ class AddProperty extends Component {
                   name="title"
                   value={this.state.title}
                   onChange={this.handleFieldChange}
+                  required
                 />
               </div>
             </div>

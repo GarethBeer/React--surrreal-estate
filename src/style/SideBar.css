@@ -1,6 +1,4 @@
 .sideBarContainer {
-  /* background-image: linear-gradient(to left, rgb(224, 85, 213), rgb(70, 1, 70)); */
-
   margin: 0 10px auto 0px;
 }
 
@@ -9,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 10px;
+  background-image: linear-gradient(to left, rgb(224, 85, 213), rgb(70, 1, 70));
 }
 
 .sideBarContainer h2 {

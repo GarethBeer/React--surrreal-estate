@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
-import Filter from './Filter';
-import Sort from './Sort';
+import SideBar from './SideBar';
 import PropertyCard from './PropertyCard';
 import '../style/Properties.css';
 
@@ -71,22 +70,11 @@ class Properties extends Component {
   render() {
     return (
       <div className="filter-summaries">
-        <div className="sidebar">
-          <div>
-            <button onClick={this.handleFilter} type="button">
-              <i className="fas fa-filter" />
-              Filter
-            </button>
-            {this.state.sidebar.filter && <Filter />}
-          </div>
-          <div>
-            <button onClick={this.handleSort} type="button">
-              <i className="fas fa-sort" />
-              Sort
-            </button>
-            {this.state.sidebar.sort && <Sort />}
-          </div>
-        </div>
+        <SideBar
+          sidebar={this.state.sidebar}
+          clickFilter={this.handleFilter}
+          clickSort={this.handleSort}
+        />
         <section className="property-summaries">
           {this.state.properties.map(property => (
             <PropertyCard
