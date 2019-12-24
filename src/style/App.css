@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: 'Nunito', sans-serif;
   letter-spacing: 2px;
+  background-color: rgba(175, 153, 120, 0.37);
 }
 h1 {
   display: flex;

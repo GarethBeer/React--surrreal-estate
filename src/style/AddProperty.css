@@ -18,7 +18,7 @@
 }
 
 h2 {
-  color: purple;
+  color: #5d4954;
   font-weight: 600;
 }
 
@@ -34,7 +34,8 @@ h2 {
   background-color: white;
   width: auto;
   margin: 0;
-  border: 2px solid purple;
+  border: 2px solid #5d4954;
+  background-color: rgba(175, 153, 120, 0.534);
 }
 
 .formItem {
@@ -104,7 +105,7 @@ select {
 button {
   cursor: pointer;
   width: 100px;
-  background-image: linear-gradient(to left, rgb(224, 85, 213), rgb(70, 1, 70));
+  background-color: #5d4954;
   color: white;
   border-radius: 20px;
 }

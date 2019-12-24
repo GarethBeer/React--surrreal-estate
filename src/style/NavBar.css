@@ -4,11 +4,12 @@
   align-items: center;
   flex-wrap: wrap;
   height: 100%;
-  background-image: linear-gradient(to left, rgb(224, 85, 213), rgb(70, 1, 70));
+  background-color: #5d4954;
 }
 .item-container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 img {
   width: 100px;
@@ -23,8 +24,7 @@ img {
 .item {
   margin: 0;
   padding: 5px;
-  border: 2px solid white;
-  border-radius: 20%;
+
   color: white;
   margin-right: 10px;
   text-decoration: none;
@@ -32,8 +32,7 @@ img {
 }
 
 .item:hover {
-  color: purple;
-  background-color: white;
+  color: white;
 }
 
 i {
@@ -44,4 +43,19 @@ h3 {
   color: white;
   font-family: 'Kaushan Script', cursive;
   font-size: 20px;
+}
+
+.fbLoggedIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-left: 100px;
+  color: white;
+  font-size: 12px;
+}
+.fbLoggedIn img {
+  width: 30%;
+  height: 30%;
 }

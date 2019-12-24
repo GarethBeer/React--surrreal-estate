@@ -2,55 +2,89 @@
   margin: 10px;
   padding: 5px;
   line-height: 10px;
-  width: 400px;
-  height: 400px;
-  box-shadow: 5px 5px 10px rgb(136, 73, 136);
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: purple;
+  color: #5d4954;
   background-color: whitesmoke;
 }
 .PropertyCard i {
   color: black;
 }
 .PropertyCard img {
-  width: 80%;
-  height: 50%;
-  align-items: center;
+  width: 70%;
+  height: 70%;
 }
 .title {
   text-align: center;
   font-size: 20px;
-  margin: 2px 0px 12px 0px;
+  padding: 15px;
   width: 100%;
   line-height: normal;
 }
 
 .email {
-  text-align: center;
-  background-image: linear-gradient(to left, rgb(224, 85, 213), rgb(70, 1, 70));
-  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #5d4954;
   height: 22px;
   border-radius: 2px;
   color: white;
+  margin: auto;
 }
 .email i {
   color: white;
+  padding: 5px 10px;
+}
+.email p {
+  color: white;
+  padding: 5px 10px;
 }
 
 .bed-bath {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .bathroom {
   margin-left: 10px;
 }
 
-.PropertyCard p {
-  margin: 5px;
+.desc {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.title-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.type-city {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bed-bath-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.email-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

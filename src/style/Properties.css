@@ -1,8 +1,44 @@
-.filter-summaries {
+/* naming conventions = "-containers" outermost box of section*/
+
+.properties-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+}
+.titleSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  color: #5d4954;
+}
+
+.titleSearch input {
+  background-color: rgb(201, 181, 156);
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 30%;
+  font-size: 12px;
+}
+
+.titleSearch button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+.titleSearch i {
+  align-items: center;
+  font-size: 12px;
+  padding: 3px;
+}
+
+.filter-properties {
+  display: flex;
+  flex-direction: row;
 }
 
 .property-summaries {
@@ -14,11 +50,10 @@
 }
 
 .filter-summaries button {
-  border-radius: 0;
-  width: 150px;
+  border: none;
   margin: 0px;
   font-size: 20px;
-  background-image: linear-gradient(to left, rgb(224, 85, 213), rgb(70, 1, 70));
+  background-color: #5d4954;
 }
 
 i {
@@ -26,5 +61,5 @@ i {
 }
 
 .sidebar {
-  background-image: linear-gradient(to left, rgb(224, 85, 213), rgb(70, 1, 70));
+  background-color: #5d4954;
 }

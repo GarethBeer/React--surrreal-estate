@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import qs from 'qs';
 import SideBar from './SideBar';
 import PropertyCard from './PropertyCard';
 import '../style/Properties.css';
@@ -13,6 +14,7 @@ class Properties extends Component {
         filter: false,
         sort: false,
       },
+      propSearch: '',
     };
   }
 
@@ -21,7 +23,6 @@ class Properties extends Component {
       this.setState({
         properties: data.data,
       });
-      console.log(data.data);
     });
   }
 
@@ -35,60 +36,71 @@ class Properties extends Component {
     }
   }
 
-  handleFilter = event => {
-    if (!this.state.sidebar.filter) {
-      this.setState({
-        sidebar: {
-          filter: true,
-        },
-      });
-    } else {
-      this.setState({
-        sidebar: {
-          filter: false,
-        },
-      });
-    }
+  buildQueryString = (operation, valueObj) => {
+    const {
+      location: { search },
+    } = this.props;
+
+    const currentQueryParams = qs.parse(search, { ignoreQueryPrefix: true });
+
+    const newQueryParams = {
+      ...currentQueryParams,
+      [operation]: JSON.stringify({
+        ...JSON.parse(currentQueryParams[operation] || '{}'),
+        ...valueObj,
+      }),
+    };
+
+    return qs.stringify(newQueryParams, { addQueryPrefix: true, encode: false });
   };
 
-  handleSort = event => {
-    if (!this.state.sidebar.sort) {
-      this.setState({
-        sidebar: {
-          sort: true,
-        },
-      });
-    } else {
-      this.setState({
-        sidebar: {
-          sort: false,
-        },
-      });
-    }
+  handlePropSearch = event => {
+    event.preventDefault();
+    const { propSearch } = this.state;
+
+    const newQueryString = this.buildQueryString('query', { title: { $regex: propSearch } });
+    const { history } = this.props;
+
+    history.push(newQueryString);
+
+    console.log('submitted');
   };
 
   render() {
     return (
-      <div className="filter-summaries">
-        <SideBar
-          sidebar={this.state.sidebar}
-          clickFilter={this.handleFilter}
-          clickSort={this.handleSort}
-        />
-        <section className="property-summaries">
-          {this.state.properties.map(property => (
-            <PropertyCard
-              key={property._id}
-              title={property.title}
-              type={property.type}
-              bathrooms={property.bathrooms}
-              bedrooms={property.bedrooms}
-              price={property.price}
-              city={property.city}
-              email={property.email}
-            />
-          ))}
-        </section>
+      <div className="properties-container">
+        <form className="titleSearch" onSubmit={this.handlePropSearch}>
+          <input
+            type="text"
+            value={this.state.propSearch}
+            onChange={event =>
+              this.setState({
+                propSearch: event.target.value,
+              })
+            }
+          />
+          <button type="submit">
+            <i className="fas fa-search" />
+          </button>
+        </form>
+
+        <div className="filter-properties">
+          <SideBar sidebar={this.state.sidebar} buildQuery={this.buildQueryString} />
+          <section className="property-summaries">
+            {this.state.properties.map(property => (
+              <PropertyCard
+                key={property._id}
+                title={property.title}
+                type={property.type}
+                bathrooms={property.bathrooms}
+                bedrooms={property.bedrooms}
+                price={property.price}
+                city={property.city}
+                email={property.email}
+              />
+            ))}
+          </section>
+        </div>
       </div>
     );
   }
