@@ -1,0 +1,21 @@
+.favourites {
+  display: flex;
+  flex-direction: row;
+  height: 84vh;
+}
+
+.FavouriteCard-page {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 300px;
+  height: 500px;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 30px auto;
+  background-color: rgb(231, 229, 229);
+  i {
+    color: black;
+  }
+}

@@ -3,18 +3,16 @@ import Axios from 'axios';
 import qs from 'qs';
 import SideBar from './SideBar';
 import PropertyCard from './PropertyCard';
-import '../style/Properties.css';
 
 class Properties extends Component {
   constructor() {
     super();
     this.state = {
       properties: [],
-      sidebar: {
-        filter: false,
-        sort: false,
-      },
+      sidebar: false,
       propSearch: '',
+      alertMessage: '',
+      isError: false,
     };
   }
 
@@ -35,6 +33,12 @@ class Properties extends Component {
         .catch(err => console.log(err));
     }
   }
+
+  handleSearchInput = event => {
+    this.setState({
+      propSearch: event.target.value,
+    });
+  };
 
   buildQueryString = (operation, valueObj) => {
     const {
@@ -62,46 +66,73 @@ class Properties extends Component {
     const { history } = this.props;
 
     history.push(newQueryString);
+  };
 
-    console.log('submitted');
+  handleSaveProperty = propertyId => {
+    Axios.post('http://localhost:3000/api/v1/Favourite', {
+      propertyListing: propertyId,
+      fbUserId: this.props.userID,
+    }).catch(error => {
+      this.setState({
+        alertMessage: 'Error, property not added',
+        isError: true,
+      });
+    });
+  };
+
+  handleSidebar = () => {
+    if (!this.state.sidebar) {
+      this.setState({
+        sidebar: true,
+      });
+    } else {
+      this.setState({
+        sidebar: false,
+      });
+    }
   };
 
   render() {
-    return (
-      <div className="properties-container">
-        <form className="titleSearch" onSubmit={this.handlePropSearch}>
-          <input
-            type="text"
-            value={this.state.propSearch}
-            onChange={event =>
-              this.setState({
-                propSearch: event.target.value,
-              })
-            }
-          />
-          <button type="submit">
-            <i className="fas fa-search" />
-          </button>
-        </form>
+    const { userID } = this.props;
 
-        <div className="filter-properties">
-          <SideBar sidebar={this.state.sidebar} buildQuery={this.buildQueryString} />
-          <section className="property-summaries">
-            {this.state.properties.map(property => (
-              <PropertyCard
-                key={property._id}
-                title={property.title}
-                type={property.type}
-                bathrooms={property.bathrooms}
-                bedrooms={property.bedrooms}
-                price={property.price}
-                city={property.city}
-                email={property.email}
-              />
-            ))}
-          </section>
+    return (
+      <section className="properties-page">
+        {this.state.sidebar ? (
+          <div className="sidebar">
+            <SideBar
+              sidebar={this.state.sidebar}
+              buildQuery={this.buildQueryString}
+              search={this.handlePropSearch}
+              searchInput={this.handleSearchInput}
+              value={this.state.propSearch}
+            />
+          </div>
+        ) : (
+          ''
+        )}
+        <div className="btn">
+          <button onClick={this.handleSidebar} className="filter-btn">
+            filter
+          </button>
         </div>
-      </div>
+        <div className="property-summaries">
+          {this.state.properties.map(property => (
+            <PropertyCard
+              key={property._id}
+              title={property.title}
+              type={property.type}
+              bathrooms={property.bathrooms}
+              bedrooms={property.bedrooms}
+              price={property.price}
+              city={property.city}
+              email={property.email}
+              userID={userID}
+              saveProp={this.handleSaveProperty}
+              id={property._id}
+            />
+          ))}
+        </div>
+      </section>
     );
   }
 }

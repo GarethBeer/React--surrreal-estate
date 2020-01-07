@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
-import '../style/NavBar.css';
 
 const NavBar = props => {
   const { onLogin, state, logOut } = props;
@@ -11,41 +10,42 @@ const NavBar = props => {
     fbContent = (
       <div className="fbLoggedIn" onClick={logOut}>
         <img src={state.picture} alt={state.name} />
-        <span>
-          Welcome {'  '}
-          {state.name}
-        </span>
+        <span>{state.name}</span>
       </div>
     );
   } else {
     fbContent = (
-      <FacebookLogin
-        appId="972987829738952"
-        autoLoad
-        fields="name,email,picture"
-        callback={onLogin}
-      />
+      <FacebookLogin appId="972987829738952" fields="name,email,picture" callback={onLogin} />
     );
   }
 
   return (
-    <div className="navContainer">
-      <h3>
-        <i className="fas fa-home" />
-        Surreal Estates
-      </h3>
+    <nav>
+      <div className="navContainer">
+        <h3>
+          <i className="fas fa-home" />
+          Surreal Estates
+        </h3>
 
-      <div className="item-container">
-        <Link to="/" className="item">
-          View Properties
-        </Link>
+        <div className="item-container">
+          <Link to="/" className="item">
+            Properties
+          </Link>
+          {state.isLoggedIn ? (
+            <Link to="/Favourites" className="item">
+              Favourites
+            </Link>
+          ) : (
+            ''
+          )}
 
-        <Link to="/AddProperty" className="item">
-          Add a property
-        </Link>
-        {fbContent}
+          <Link to="/AddProperty" className="item">
+            Add a property
+          </Link>
+          {fbContent}
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 export default NavBar;

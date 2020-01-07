@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import Articles from './articles';
 import Alert from './Alert';
-import '../style/AddProperty.css';
 
 class AddProperty extends Component {
   constructor() {
@@ -66,7 +65,7 @@ class AddProperty extends Component {
             {this.state.isSuccess && <Alert message={this.state.alertMessage} success />}
             {this.state.isError && <Alert message={this.state.alertMessage} />}
             <div className="formItem title">
-              <label>Title</label>
+              <label>Description</label>
               <div className="input-icon">
                 <input
                   type="text"

@@ -1,0 +1,21 @@
+@import './_AddProperty.scss';
+@import './_articles.scss';
+@import './_favourites.scss';
+@import './_footer.scss';
+@import './_NavBar.scss';
+@import './_Properties.scss';
+@import './_PropertyCard.scss';
+@import './_SideBar.scss';
+@import './_FavouriteCard.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 2px;
+  background-color: rgb(243, 241, 239);
+}
+h1 {
+  display: flex;
+  justify-content: center;
+}

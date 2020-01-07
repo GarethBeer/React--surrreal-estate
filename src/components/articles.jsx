@@ -1,7 +1,6 @@
 import React from 'react';
 import renters from '../style/images/renters.png';
 import landlords from '../style/images/landlords.png';
-import '../style/articles.css';
 
 const Article = () => (
   <div className="articles-container">

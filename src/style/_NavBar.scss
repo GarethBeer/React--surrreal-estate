@@ -1,10 +1,16 @@
+nav {
+  background-color: #4b2929ec;
+}
+
 .navContainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   height: 100%;
-  background-color: #5d4954;
+
+  width: 90%;
+  margin: auto;
 }
 .item-container {
   display: flex;
@@ -51,11 +57,23 @@ h3 {
   justify-content: center;
   align-items: center;
   width: auto;
-  margin-left: 100px;
+  margin-left: 30px;
   color: white;
   font-size: 12px;
 }
 .fbLoggedIn img {
   width: 30%;
   height: 30%;
+}
+
+@media screen and (max-width: 870px) {
+  .navContainer {
+    display: flex;
+    flex-direction: column;
+    .item-container {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+  }
 }

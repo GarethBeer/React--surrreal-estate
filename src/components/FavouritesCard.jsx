@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PropertyCard = props => {
+const FavouritesCard = props => {
   const {
     title,
     type,
@@ -13,15 +13,12 @@ const PropertyCard = props => {
     userID,
     saveProp,
     id,
+    deletefunc,
     button,
   } = props;
 
-  let saveBtn;
-  if (userID) {
-    saveBtn = <button onClick={() => saveProp(id)}>Save</button>;
-  }
   return (
-    <div className="PropertyCard">
+    <div className="FavouriteCard-page">
       <div className="title-image">
         <h5 className="title">{title}</h5>
         <img
@@ -32,9 +29,11 @@ const PropertyCard = props => {
       <div className="desc">
         <div className="type-city">
           <div>
+            <span>Type:</span>
             <p className="type">{type}</p>
           </div>
           <div>
+            <span>Location:</span>
             <p className="city">{city}</p>
           </div>
         </div>
@@ -60,13 +59,13 @@ const PropertyCard = props => {
             {email}
           </p>
         </div>
-        {saveBtn}
       </div>
+      <button onClick={() => deletefunc(id)}>Delete</button>
     </div>
   );
 };
 
-PropertyCard.propTypes = {
+FavouritesCard.propTypes = {
   title: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   bathrooms: PropTypes.number.isRequired,
@@ -76,4 +75,4 @@ PropertyCard.propTypes = {
   email: PropTypes.string.isRequired,
 };
 
-export default PropertyCard;
+export default FavouritesCard;
