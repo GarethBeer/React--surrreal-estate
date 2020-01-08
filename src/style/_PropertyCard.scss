@@ -1,8 +1,8 @@
 .PropertyCard {
   margin: 20px;
   line-height: 10px;
-  width: 70%;
-
+  width: 90%;
+  border: 1px solid rgb(194, 192, 192);
   border-radius: 3px;
   display: flex;
   flex-direction: row;
@@ -30,7 +30,7 @@
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    background-color: #252525;
+    /* background-color: #252525; */
     color: rgb(194, 192, 192);
     .price {
       font-size: 1rem;
@@ -98,5 +98,29 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .PropertyCard {
+    width: 90%;
+    border: none;
+    .box-1 {
+      .bed-bath-price {
+        font-size: 12px;
+        .bed-bath {
+          font-size: 12px;
+        }
+        .price {
+          font-size: 12px;
+        }
+      }
+    }
+    .box-2 {
+      .title {
+        font-size: 12px;
+      }
+      font-size: 12px;
+    }
   }
 }

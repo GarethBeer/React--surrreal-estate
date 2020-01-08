@@ -163,6 +163,42 @@
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 600px) {
+  .add-propContainer {
+    height: 100vh;
+  }
+  .add-propContainer .form {
+    height: 500px;
+    width: 300px;
+  }
+  .add-propContainer .form .description {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+  .add-propContainer .form .description textarea {
+    width: 100%;
+    font-size: 18px;
+    background-color: #c2c0c0;
+  }
+  .add-propContainer .form .item-rows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .articles-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,7 +265,7 @@ h2 {
 }
 
 .footerContainer {
-  background-color: #252525d7;
+  background-color: #252525fa;
   width: 100%;
   height: 50px;
   display: -webkit-box;
@@ -245,7 +281,7 @@ h2 {
 }
 
 nav {
-  background-color: #252525f5;
+  background-color: #252525;
 }
 
 .navContainer {
@@ -409,13 +445,31 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 70%;
+  background-color: #252525d7;
+}
+
+@media screen and (max-width: 870px) {
+  .properties-page .properties-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90%;
+  }
+  .property-summaries {
+    width: 100%;
+    background-color: #2525258e;
+  }
 }
 
 .PropertyCard {
   margin: 20px;
   line-height: 10px;
-  width: 70%;
+  width: 90%;
+  border: 1px solid #c2c0c0;
   border-radius: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -472,7 +526,7 @@ h3 {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 100%;
-  background-color: #252525;
+  /* background-color: #252525; */
   color: #c2c0c0;
 }
 
@@ -585,6 +639,28 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 870px) {
+  .PropertyCard {
+    width: 90%;
+    border: none;
+  }
+  .PropertyCard .box-1 .bed-bath-price {
+    font-size: 12px;
+  }
+  .PropertyCard .box-1 .bed-bath-price .bed-bath {
+    font-size: 12px;
+  }
+  .PropertyCard .box-1 .bed-bath-price .price {
+    font-size: 12px;
+  }
+  .PropertyCard .box-2 {
+    font-size: 12px;
+  }
+  .PropertyCard .box-2 .title {
+    font-size: 12px;
+  }
 }
 
 .sidebar {
