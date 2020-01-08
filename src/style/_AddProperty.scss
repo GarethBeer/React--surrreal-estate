@@ -1,5 +1,5 @@
 .add-propContainer {
-  background-image: url(../style/images/bigben.jpg);
+  background-image: url(../style/images/addprop1.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -8,13 +8,13 @@
   text-align: center;
   margin: auto;
   padding: 0;
-  height: 550px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   h2 {
-    color: #4b2929ec;
+    color: #252525;
     font-weight: 600;
   }
 
@@ -27,11 +27,11 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 5px;
-    background-color: white;
     width: auto;
     margin: 0;
-    border: 2px solid #4b2929ec;
-    background-color: rgba(175, 153, 120, 0.913);
+    color: rgb(187, 185, 185);
+    background-color: #252525;
+    border-radius: 10px;
   }
 
   .formItem {
@@ -44,7 +44,7 @@
   }
 
   .input-icon {
-    border: 2px solid #4b2929ec;
+    border: 2px solid #252525d7;
     border-radius: 5%;
     display: flex;
     align-items: center;
@@ -59,20 +59,21 @@
   }
 
   .form i {
-    color: #4b2929ec;
+    color: #252525d7;
     font-size: 18px;
-    border-right: 2px solid #4b2929ec;
+    border-right: 2px solid #252525d7;
     padding: 2px;
   }
 
   input {
     border: none;
-    background-color: rgb(220, 218, 218);
+    background-color: rgb(194, 192, 192);
     padding: 0px 0px 0px 5px;
+    height: 100%;
   }
 
   select {
-    background-color: rgb(220, 218, 218);
+    background-color: rgb(194, 192, 192);
     border: 2px solid black;
   }
 
@@ -86,20 +87,21 @@
     }
   }
 
-  .title {
-    width: 60%;
+  .description {
+    width: 100%;
     margin: auto;
     display: block;
-    input {
-      width: 98%;
+    textarea {
+      width: 500px;
       font-size: 18px;
+      background-color: rgb(194, 192, 192);
     }
   }
 
   button {
     cursor: pointer;
     width: 100px;
-    background-color: #5d4954;
+    background-color: #252525d7;
     color: white;
     border-radius: 20px;
   }

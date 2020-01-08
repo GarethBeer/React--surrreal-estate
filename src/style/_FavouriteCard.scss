@@ -1,21 +1,26 @@
 .favourites {
   display: flex;
-  flex-direction: row;
-  height: 84vh;
-}
-
-.FavouriteCard-page {
-  display: flex;
   flex-direction: column;
-  border: 2px solid black;
-  border-radius: 20px;
-  width: 300px;
-  height: 500px;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin: 30px auto;
-  background-color: rgb(231, 229, 229);
-  i {
-    color: black;
+  width: 100%;
+  min-height: 84vh;
+
+  .FavouriteCard {
+    margin: 20px;
+    line-height: 10px;
+    width: 70%;
+    padding: 20px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #4b2929ec;
+    background-color: whitesmoke;
+    opacity: 0.95;
+    img {
+      height: 70%;
+    }
   }
 }

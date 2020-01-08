@@ -66,11 +66,11 @@ class AddProperty extends Component {
             {this.state.isError && <Alert message={this.state.alertMessage} />}
             <div className="formItem title">
               <label>Description</label>
-              <div className="input-icon">
-                <input
+              <div className="description">
+                <textarea
                   type="text"
                   name="title"
-                  value={this.state.title}
+                  value={this.state.description}
                   onChange={this.handleFieldChange}
                   required
                 />

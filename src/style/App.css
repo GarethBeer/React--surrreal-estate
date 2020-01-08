@@ -1,5 +1,5 @@
 .add-propContainer {
-  background-image: url(../style/images/bigben.jpg);
+  background-image: url(../style/images/addprop1.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
   text-align: center;
   margin: auto;
   padding: 0;
-  height: 550px;
+  height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,7 +29,7 @@
 }
 
 .add-propContainer h2 {
-  color: #4b2929ec;
+  color: #252525;
   font-weight: 600;
 }
 
@@ -50,11 +50,11 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 5px;
-  background-color: white;
   width: auto;
   margin: 0;
-  border: 2px solid #4b2929ec;
-  background-color: rgba(175, 153, 120, 0.913);
+  color: #bbb9b9;
+  background-color: #252525;
+  border-radius: 10px;
 }
 
 .add-propContainer .formItem {
@@ -76,7 +76,7 @@
 }
 
 .add-propContainer .input-icon {
-  border: 2px solid #4b2929ec;
+  border: 2px solid #252525d7;
   border-radius: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,20 +102,21 @@
 }
 
 .add-propContainer .form i {
-  color: #4b2929ec;
+  color: #252525d7;
   font-size: 18px;
-  border-right: 2px solid #4b2929ec;
+  border-right: 2px solid #252525d7;
   padding: 2px;
 }
 
 .add-propContainer input {
   border: none;
-  background-color: #dcdada;
+  background-color: #c2c0c0;
   padding: 0px 0px 0px 5px;
+  height: 100%;
 }
 
 .add-propContainer select {
-  background-color: #dcdada;
+  background-color: #c2c0c0;
   border: 2px solid black;
 }
 
@@ -130,21 +131,22 @@
   font-size: 18px;
 }
 
-.add-propContainer .title {
-  width: 60%;
+.add-propContainer .description {
+  width: 100%;
   margin: auto;
   display: block;
 }
 
-.add-propContainer .title input {
-  width: 98%;
+.add-propContainer .description textarea {
+  width: 500px;
   font-size: 18px;
+  background-color: #c2c0c0;
 }
 
 .add-propContainer button {
   cursor: pointer;
   width: 100px;
-  background-color: #5d4954;
+  background-color: #252525d7;
   color: white;
   border-radius: 20px;
 }
@@ -168,13 +170,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  /* background-color: #252525; */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  color: #4b2929ec;
-  margin: 50px 0;
+  color: #252525;
+  margin: 50px 0px;
 }
 
 .articles {
@@ -226,7 +229,7 @@ h2 {
 }
 
 .footerContainer {
-  background-color: #4b2929ec;
+  background-color: #252525d7;
   width: 100%;
   height: 50px;
   display: -webkit-box;
@@ -242,7 +245,7 @@ h2 {
 }
 
 nav {
-  background-color: #4b2929ec;
+  background-color: #252525f5;
 }
 
 .navContainer {
@@ -356,7 +359,7 @@ h3 {
 
 /* naming conventions = "-containers" outermost box of section*/
 .properties-page {
-  background-image: url("./images/properties-page1.jpg");
+  background-image: url("./images/brick.jpg");
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -374,6 +377,22 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 80vh;
+}
+
+.properties-page .properties-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 90%;
+}
+
+.properties-page .properties-title h1 {
+  margin: 100px 0px 5px;
+  color: whitesmoke;
 }
 
 .property-summaries {
@@ -393,33 +412,10 @@ h3 {
   width: 100%;
 }
 
-.btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0px;
-  margin: 0px;
-}
-
-.btn .filter-btn {
-  background-color: #4b2929ec;
-  color: white;
-  font-size: 1rem;
-  width: 100px;
-  border-radius: 0 0 20px 20px;
-}
-
 .PropertyCard {
-  margin: 10px;
+  margin: 20px;
   line-height: 10px;
   width: 70%;
-  padding: 20px;
   border-radius: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -434,76 +430,11 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #4b2929ec;
-  background-color: whitesmoke;
-  opacity: 0.95;
-}
-
-.PropertyCard i {
-  color: #4b2929ec;
-}
-
-.PropertyCard img {
-  width: 70%;
-  height: 70%;
-}
-
-.title {
-  text-align: center;
-  font-size: 20px;
-  padding: 15px;
-  line-height: normal;
-}
-
-.email {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #4b2929ec;
-  height: 22px;
-  border-radius: 2px;
   color: white;
-  margin: auto;
+  background-color: #252525;
 }
 
-.email i {
-  color: white;
-  padding: 5px 10px;
-}
-
-.email p {
-  color: white;
-  padding: 5px 10px;
-}
-
-.bed-bath {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.bathroom {
-  margin-left: 10px;
-}
-
-.desc {
+.box-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,13 +442,22 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.title-image {
+.box-1 img {
+  width: 100%;
+  height: 80%;
+}
+
+.box-1 .bed-bath-price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -525,25 +465,50 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.type-city {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 100%;
+  background-color: #252525;
+  color: #c2c0c0;
 }
 
-.bed-bath-price {
+.box-1 .bed-bath-price .price {
+  font-size: 1rem;
+  margin: 10px;
+  font-weight: bolder;
+}
+
+.box-1 .bed-bath-price .bed-bath {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 80%;
+  font-size: 1rem;
+}
+
+.box-1 .bed-bath-price .bathroom {
+  margin-left: 10px;
+}
+
+.box-1 .bed-bath-price i {
+  color: #c2c0c0;
+}
+
+.box-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,15 +516,65 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
-.email-container {
+.box-2 .title {
+  margin: 0px;
+  font-size: 14px;
+  color: #c2c0c0;
+  text-align: center;
+  line-height: normal;
+  padding: 5px 10px;
+  height: 100%;
+}
+
+.box-2 .type-city {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  color: #c2c0c0;
+}
+
+.box-2 .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 22px;
+  border-radius: 2px;
+  color: #c2c0c0;
+  margin: auto;
+}
+
+.box-2 .email i {
+  color: #c2c0c0;
+  padding: 5px 10px;
+}
+
+.box-2 .email p {
+  color: #c2c0c0;
+  padding: 0px 5px;
+}
+
+.box-2 .email-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -581,7 +596,7 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 10px;
-  background-color: #4b2929ec;
+  background-color: #252525fa;
   -webkit-transition: ease-in 5s;
   transition: ease-in 5s;
   width: 90%;
@@ -589,6 +604,7 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
+  margin-bottom: 100px;
 }
 
 .sidebar .link-container {
@@ -668,37 +684,46 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 84vh;
-}
-
-.FavouriteCard-page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 2px solid black;
-  border-radius: 20px;
-  width: 300px;
-  height: 500px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 30px auto;
-  background-color: #e7e5e5;
+  width: 100%;
+  min-height: 84vh;
 }
 
-.FavouriteCard-page i {
-  color: black;
+.favourites .FavouriteCard {
+  margin: 20px;
+  line-height: 10px;
+  width: 70%;
+  padding: 20px;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #4b2929ec;
+  background-color: whitesmoke;
+  opacity: 0.95;
+}
+
+.favourites .FavouriteCard img {
+  height: 70%;
 }
 
 body {

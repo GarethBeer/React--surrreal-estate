@@ -1,12 +1,12 @@
 .articles-container {
   display: flex;
   justify-content: center;
-
+  /* background-color: #252525; */
   flex-direction: column;
   width: 100%;
-  color: #4b2929ec;
+  color: #252525;
 
-  margin: 50px 0;
+  margin: 50px 0px;
 }
 .articles {
   display: flex;

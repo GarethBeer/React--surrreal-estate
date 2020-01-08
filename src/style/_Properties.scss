@@ -1,7 +1,7 @@
 /* naming conventions = "-containers" outermost box of section*/
 
 .properties-page {
-  background-image: url('./images/properties-page1.jpg');
+  background-image: url('./images/brick.jpg');
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -10,6 +10,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 80vh;
+  .properties-title {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    h1 {
+      margin: 100px 0px 5px;
+      color: whitesmoke;
+    }
+  }
 }
 .property-summaries {
   display: flex;
@@ -17,19 +27,4 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  margin: 0px;
-  .filter-btn {
-    background-color: #4b2929ec;
-    color: white;
-    font-size: 1rem;
-    width: 100px;
-    border-radius: 0 0 20px 20px;
-  }
 }

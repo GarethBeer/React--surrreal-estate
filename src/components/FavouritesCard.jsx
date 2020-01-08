@@ -10,33 +10,18 @@ const FavouritesCard = props => {
     price,
     city,
     email,
-    userID,
-    saveProp,
+
     id,
     deletefunc,
-    button,
   } = props;
 
   return (
-    <div className="FavouriteCard-page">
-      <div className="title-image">
-        <h5 className="title">{title}</h5>
+    <div className="FavouriteCard">
+      <div className="box-1">
         <img
           src={require(`../style/images/${type}.jpg`)}
           alt="House set back with white picket fence"
         />
-      </div>
-      <div className="desc">
-        <div className="type-city">
-          <div>
-            <span>Type:</span>
-            <p className="type">{type}</p>
-          </div>
-          <div>
-            <span>Location:</span>
-            <p className="city">{city}</p>
-          </div>
-        </div>
         <div className="bed-bath-price">
           <div className="bed-bath">
             <p className="bedroom">
@@ -53,14 +38,29 @@ const FavouritesCard = props => {
             {price}
           </p>
         </div>
+      </div>
+
+      <div className="box-2">
+        <h5 className="title">{title}</h5>
+        <div className="type-city">
+          <div>
+            <p className="type">{type}</p>
+          </div>
+          <div>
+            <p className="city">{city}</p>
+          </div>
+        </div>
+
         <div className="email-container">
           <p className="email">
             <i className="far fa-envelope" />
             {email}
           </p>
         </div>
+        <button type="button" onClick={() => deletefunc(id)}>
+          Delete
+        </button>
       </div>
-      <button onClick={() => deletefunc(id)}>Delete</button>
     </div>
   );
 };

@@ -97,24 +97,17 @@ class Properties extends Component {
 
     return (
       <section className="properties-page">
-        {this.state.sidebar ? (
-          <div className="sidebar">
-            <SideBar
-              sidebar={this.state.sidebar}
-              buildQuery={this.buildQueryString}
-              search={this.handlePropSearch}
-              searchInput={this.handleSearchInput}
-              value={this.state.propSearch}
-            />
-          </div>
-        ) : (
-          ''
-        )}
-        <div className="btn">
-          <button onClick={this.handleSidebar} className="filter-btn">
-            filter
-          </button>
+        <div className="properties-title">
+          <h1>Search Properties...</h1>
         </div>
+        <SideBar
+          sidebar={this.state.sidebar}
+          buildQuery={this.buildQueryString}
+          search={this.handlePropSearch}
+          searchInput={this.handleSearchInput}
+          value={this.state.propSearch}
+        />
+
         <div className="property-summaries">
           {this.state.properties.map(property => (
             <PropertyCard

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: #4b2929ec;
+  background-color: #252525fa;
 
   transition: ease-in 5s;
   width: 90%;
@@ -10,6 +10,7 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
+  margin-bottom: 100px;
 
   .link-container {
     display: flex;
