@@ -21,48 +21,34 @@ const PropertyCard = props => {
     saveBtn = <button onClick={() => saveProp(id)}>Save</button>;
   }
   return (
-    <div className="PropertyCard">
-      <div className="box-1">
-        <img
-          src={require(`../style/images/${type}.jpg`)}
-          alt="House set back with white picket fence"
-        />
-        <div className="bed-bath-price">
-          <div className="bed-bath">
-            <p className="bedroom">
-              <i className="fas fa-bed" />
-              {bedrooms}
-            </p>
-            <p className="bathroom">
-              <i className="fas fa-bath" />
-              {bathrooms}
-            </p>
+    <div className="card">
+      <div className="card-image">
+        <img src={require(`../style/images/${type}.jpg`)} alt="" />
+      </div>
+      <div className="card-text">
+        <span className="date">{type}</span>
+        <h2>{city}</h2>
+        <p>{title}</p>
+      </div>
+      <div className="card-stats">
+        <div className="stat">
+          <div className="value">
+            <i className="fas fa-bed" />
+            {bedrooms}
           </div>
-          <p className="price">
+        </div>
+        <div className="stat border">
+          <div className="value">
             <i className="fas fa-pound-sign" />
             {price}
-          </p>
-        </div>
-      </div>
-
-      <div className="box-2">
-        <h5 className="title">{title}</h5>
-        <div className="type-city">
-          <div>
-            <p className="type">{type}</p>
-          </div>
-          <div>
-            <p className="city">{city}</p>
           </div>
         </div>
-
-        <div className="email-container">
-          <p className="email">
-            <i className="far fa-envelope" />
-            {email}
-          </p>
+        <div className="stat">
+          <div className="value">
+            <i className="fas fa-bath" />
+            {bathrooms}
+          </div>
         </div>
-        {saveBtn}
       </div>
     </div>
   );

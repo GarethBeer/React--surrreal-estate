@@ -58,7 +58,7 @@ class AddProperty extends Component {
 
   render() {
     return (
-      <div>
+      <section className="AddProperty">
         <div className="add-propContainer">
           <h2>Are you looking to rent your property? Fill in the details below</h2>
           <form action="" onSubmit={this.handleAddProperty} className="form">
@@ -154,7 +154,7 @@ class AddProperty extends Component {
           </form>
         </div>
         <Articles />
-      </div>
+      </section>
     );
   }
 }

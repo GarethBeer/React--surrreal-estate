@@ -1,109 +1,111 @@
-.add-propContainer {
-  background-image: url(../style/images/addprop1.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  background-position: center center;
-  text-align: center;
-  margin: auto;
-  padding: 0;
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h2 {
-    color: #252525;
-    font-weight: 600;
-  }
-
-  /*** Form Styling **/
-
-  .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 5px;
-    width: auto;
-    margin: 0;
-    color: rgb(187, 185, 185);
-    background-color: #252525;
-    border-radius: 10px;
-  }
-
-  .formItem {
-    margin: 3px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .input-icon {
-    border: 2px solid #252525d7;
-    border-radius: 5%;
-    display: flex;
-    align-items: center;
-    background-color: rgb(220, 218, 218);
-  }
-
-  .item-rows {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.AddProperty {
+  .add-propContainer {
+    background-image: url(../style/images/addprop1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
-  }
-
-  .form i {
-    color: #252525d7;
-    font-size: 18px;
-    border-right: 2px solid #252525d7;
-    padding: 2px;
-  }
-
-  input {
-    border: none;
-    background-color: rgb(194, 192, 192);
-    padding: 0px 0px 0px 5px;
-    height: 100%;
-  }
-
-  select {
-    background-color: rgb(194, 192, 192);
-    border: 2px solid black;
-  }
-
-  .email-entry {
-    width: 80%;
+    background-position: center center;
+    text-align: center;
     margin: auto;
-    display: block;
+    padding: 0;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      color: #252525;
+      font-weight: 600;
+    }
+
+    /*** Form Styling **/
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 5px;
+      width: auto;
+      margin: 0;
+      color: rgb(187, 185, 185);
+      background-color: #252525;
+      border-radius: 10px;
+    }
+
+    .formItem {
+      margin: 3px;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .input-icon {
+      border: 2px solid #252525d7;
+      border-radius: 5%;
+      display: flex;
+      align-items: center;
+      background-color: rgb(220, 218, 218);
+    }
+
+    .item-rows {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .form i {
+      color: #252525d7;
+      font-size: 18px;
+      border-right: 2px solid #252525d7;
+      padding: 2px;
+    }
+
     input {
-      width: 98%;
-      font-size: 18px;
-    }
-  }
-
-  .description {
-    width: 100%;
-    margin: auto;
-    display: block;
-    textarea {
-      width: 500px;
-      font-size: 18px;
+      border: none;
       background-color: rgb(194, 192, 192);
+      padding: 0px 0px 0px 5px;
+      height: 100%;
     }
-  }
 
-  button {
-    cursor: pointer;
-    width: 100px;
-    background-color: #252525d7;
-    color: white;
-    border-radius: 20px;
+    select {
+      background-color: rgb(194, 192, 192);
+      border: 2px solid black;
+    }
+
+    .email-entry {
+      width: 80%;
+      margin: auto;
+      display: block;
+      input {
+        width: 98%;
+        font-size: 18px;
+      }
+    }
+
+    .description {
+      width: 100%;
+      margin: auto;
+      display: block;
+      textarea {
+        width: 500px;
+        font-size: 18px;
+        background-color: rgb(194, 192, 192);
+      }
+    }
+
+    button {
+      cursor: pointer;
+      width: 100px;
+      background-color: #252525d7;
+      color: white;
+      border-radius: 20px;
+    }
   }
   /** Form Styling end **/
 

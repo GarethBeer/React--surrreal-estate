@@ -23,11 +23,10 @@
 }
 .property-summaries {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  background-color: #252525d7;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 870px) {
@@ -38,6 +37,5 @@
   }
   .property-summaries {
     width: 100%;
-    background-color: #2525258e;
   }
 }

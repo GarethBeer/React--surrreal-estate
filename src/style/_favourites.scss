@@ -1,7 +1,13 @@
 .favourites {
+  background-image: url('./images/brick.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 84vh;
 }
