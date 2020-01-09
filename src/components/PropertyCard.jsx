@@ -29,6 +29,7 @@ const PropertyCard = props => {
         <span className="date">{type}</span>
         <h2>{city}</h2>
         <p>{title}</p>
+        <span>{email}</span>
       </div>
       <div className="card-stats">
         <div className="stat">

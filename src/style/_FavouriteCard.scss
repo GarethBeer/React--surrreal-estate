@@ -1,18 +1,18 @@
 .card {
   display: grid;
   grid-template-columns: 500px;
-  grid-template-rows: 280px 280px 80px;
+  grid-template-rows: 280px 300px 80px;
   grid-template-areas: 'image' 'text' 'stats';
 
   border-radius: 18px;
   background: white;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  box-shadow: 5px 25px 30px 30px rgba(0, 0, 0, 0.9);
   font-family: roboto;
   text-align: center;
 
   transition: 0.5s ease;
   cursor: pointer;
-  margin: 30px;
+  margin: 50px;
   .card-image {
     img {
       width: 100%;

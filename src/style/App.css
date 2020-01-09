@@ -473,202 +473,118 @@ h3 {
   }
 }
 
-.PropertyCard {
-  margin: 20px;
-  line-height: 10px;
-  width: 90%;
-  /* border: 1px solid rgb(194, 192, 192); */
-  border-radius: 3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: whitesmoke;
-  background-color: #2525255a;
-}
-
-.box-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-.box-1 img {
-  width: 100%;
-  height: 80%;
-}
-
-.box-1 .bed-bath-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 100%;
-  /* background-color: #252525; */
-  color: #c2c0c0;
-}
-
-.box-1 .bed-bath-price .price {
-  font-size: 1rem;
-  margin: 10px;
-  font-weight: bolder;
-}
-
-.box-1 .bed-bath-price .bed-bath {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 80%;
-  font-size: 1rem;
-}
-
-.box-1 .bed-bath-price .bathroom {
-  margin-left: 10px;
-}
-
-.box-1 .bed-bath-price i {
-  color: #c2c0c0;
-}
-
-.box-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.box-2 .title {
-  margin: 0px;
-  font-size: 14px;
-  color: #c2c0c0;
+.card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 500px;
+      grid-template-columns: 500px;
+  -ms-grid-rows: 280px 280px 80px;
+      grid-template-rows: 280px 280px 80px;
+      grid-template-areas: 'image' 'text' 'stats';
+  border-radius: 18px;
+  background: white;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  font-family: roboto;
   text-align: center;
-  line-height: normal;
-  padding: 5px 10px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card .card-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: image;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card .card-image img {
+  width: 100%;
   height: 100%;
 }
 
-.box-2 .type-city {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 90%;
-  color: #c2c0c0;
+.card .card-text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: text;
+  margin: 25px;
 }
 
-.box-2 .email {
+.card .card-text .date {
+  color: #ff076e;
+  font-size: 13px;
+}
+
+.card .card-text p {
+  color: grey;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.card .card-text h2 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.card .card-stats {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: stats;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #252525;
+}
+
+.card .card-stats .stat {
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 22px;
-  border-radius: 2px;
-  color: #c2c0c0;
-  margin: auto;
-}
-
-.box-2 .email i {
-  color: #c2c0c0;
-  padding: 5px 10px;
-}
-
-.box-2 .email p {
-  color: #c2c0c0;
-  padding: 0px 5px;
-}
-
-.box-2 .email-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
 }
 
-@media screen and (max-width: 870px) {
-  .PropertyCard {
-    width: 90%;
-    border: none;
-  }
-  .PropertyCard .box-1 .bed-bath-price {
-    font-size: 12px;
-  }
-  .PropertyCard .box-1 .bed-bath-price .bed-bath {
-    font-size: 12px;
-  }
-  .PropertyCard .box-1 .bed-bath-price .price {
-    font-size: 12px;
-  }
-  .PropertyCard .box-2 {
-    font-size: 12px;
-  }
-  .PropertyCard .box-2 .title {
-    font-size: 12px;
-  }
+.card .card-stats .border {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.card .card-stats .value {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.card .card-stats .value sup {
+  font-size: 12px;
+}
+
+.card .card-stats .type {
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.card .card:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
 .sidebar {
@@ -769,19 +685,19 @@ h3 {
   display: grid;
   -ms-grid-columns: 500px;
       grid-template-columns: 500px;
-  -ms-grid-rows: 280px 280px 80px;
-      grid-template-rows: 280px 280px 80px;
+  -ms-grid-rows: 280px 300px 80px;
+      grid-template-rows: 280px 300px 80px;
       grid-template-areas: 'image' 'text' 'stats';
   border-radius: 18px;
   background: white;
-  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 5px 25px 30px 30px rgba(0, 0, 0, 0.9);
+          box-shadow: 5px 25px 30px 30px rgba(0, 0, 0, 0.9);
   font-family: roboto;
   text-align: center;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   cursor: pointer;
-  margin: 30px;
+  margin: 50px;
 }
 
 .card .card-image {
