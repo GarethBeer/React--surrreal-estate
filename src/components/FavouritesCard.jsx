@@ -24,9 +24,10 @@ const FavouritesCard = props => {
         <span className="date">{type}</span>
         <h2>{city}</h2>
         <p>{title}</p>
-        <span>{email}</span>
-        <br />
-        <button onClick={() => deletefunc(id)}>delete</button>
+        <div className="email-button">
+          <span>{email}</span>
+          <button onClick={() => deletefunc(id)}>delete</button>
+        </div>
       </div>
       <div className="card-stats">
         <div className="stat">

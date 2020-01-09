@@ -478,8 +478,8 @@ h3 {
   display: grid;
   -ms-grid-columns: 500px;
       grid-template-columns: 500px;
-  -ms-grid-rows: 280px 280px 80px;
-      grid-template-rows: 280px 280px 80px;
+  -ms-grid-rows: 280px 400px 80px;
+      grid-template-rows: 280px 400px 80px;
       grid-template-areas: 'image' 'text' 'stats';
   border-radius: 18px;
   background: white;
@@ -527,6 +527,24 @@ h3 {
   margin-top: 0px;
   margin-bottom: 20px;
   font-size: 28px;
+}
+
+.card .email-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card .email-button button {
+  width: 50%;
+  margin: 10px auto;
+  background-color: #252525;
+  color: white;
+  border-radius: 10px;
 }
 
 .card .card-stats {
@@ -685,8 +703,8 @@ h3 {
   display: grid;
   -ms-grid-columns: 500px;
       grid-template-columns: 500px;
-  -ms-grid-rows: 280px 300px 80px;
-      grid-template-rows: 280px 300px 80px;
+  -ms-grid-rows: 280px 400px 80px;
+      grid-template-rows: 280px 400px 80px;
       grid-template-areas: 'image' 'text' 'stats';
   border-radius: 18px;
   background: white;

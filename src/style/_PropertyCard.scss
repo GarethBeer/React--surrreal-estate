@@ -1,7 +1,7 @@
 .card {
   display: grid;
   grid-template-columns: 500px;
-  grid-template-rows: 280px 280px 80px;
+  grid-template-rows: 280px 400px 80px;
   grid-template-areas: 'image' 'text' 'stats';
 
   border-radius: 18px;
@@ -41,6 +41,18 @@
     margin-top: 0px;
     margin-bottom: 20px;
     font-size: 28px;
+  }
+
+  .email-button {
+    display: flex;
+    flex-direction: column;
+    button {
+      width: 50%;
+      margin: 10px auto;
+      background-color: #252525;
+      color: white;
+      border-radius: 10px;
+    }
   }
   .card-stats {
     grid-area: stats;

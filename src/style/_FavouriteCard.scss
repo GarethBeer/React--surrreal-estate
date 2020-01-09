@@ -1,7 +1,7 @@
 .card {
   display: grid;
   grid-template-columns: 500px;
-  grid-template-rows: 280px 300px 80px;
+  grid-template-rows: 280px 400px 80px;
   grid-template-areas: 'image' 'text' 'stats';
 
   border-radius: 18px;
