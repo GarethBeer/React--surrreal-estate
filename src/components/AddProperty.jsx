@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import Axios from 'axios';
-import Articles from './articles';
 import Alert from './Alert';
 
 class AddProperty extends Component {
@@ -16,7 +15,8 @@ class AddProperty extends Component {
       price: 0,
       city: 'Manchester',
       email: ' ',
-      alertMessage: ' ',
+
+      alertMessage: '  ',
       isSuccess: false,
       isError: false,
     };
@@ -38,7 +38,6 @@ class AddProperty extends Component {
           alertMessage: 'Property Added',
           isSuccess: true,
         });
-        console.log('***', this.state.alertMessage);
       })
       .catch(error => {
         this.setState({
@@ -68,9 +67,10 @@ class AddProperty extends Component {
               <label>Description</label>
               <div className="description">
                 <textarea
+                  className="textarea"
                   type="text"
                   name="title"
-                  value={this.state.description}
+                  value={this.state.title}
                   onChange={this.handleFieldChange}
                   required
                 />
@@ -149,11 +149,12 @@ class AddProperty extends Component {
               </div>
             </div>
             <div className="formItem">
-              <button type="submit">Add</button>
+              <button className="form-btn" type="submit">
+                Add
+              </button>
             </div>
           </form>
         </div>
-        <Articles />
       </section>
     );
   }

@@ -49,6 +49,7 @@ SideBar.propTypes = {
   buildQuery: PropTypes.func.isRequired,
   search: PropTypes.func.isRequired,
   searchInput: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export default SideBar;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import PropTypes from 'prop-types';
 import FavouritesCard from './FavouritesCard';
 
 class Favourites extends Component {
@@ -24,16 +25,19 @@ class Favourites extends Component {
   };
 
   handleDeleteFavourite = id => {
+    const { properties } = this.state;
     Axios.delete(`http://localhost:3000/api/v1/Favourite/${id}`)
       .then(
         this.setState({
-          properties: this.state.properties.filter(property => property._id !== property.id),
+          properties: properties.filter(property => property._id !== id),
         }),
       )
       .catch(error => console.log(error));
   };
 
   render() {
+    const { deleteBtn } = this.state;
+
     return (
       <section className="favourites">
         {this.state.properties.map(property => (
@@ -47,7 +51,7 @@ class Favourites extends Component {
             price={property.propertyListing.price}
             city={property.propertyListing.city}
             email={property.propertyListing.email}
-            button={this.state.deleteBtn}
+            button={deleteBtn}
             deletefunc={this.handleDeleteFavourite}
           />
         ))}
@@ -57,3 +61,7 @@ class Favourites extends Component {
 }
 
 export default Favourites;
+
+Favourites.propTypes = {
+  loggedIn: PropTypes.bool.isRequired,
+};

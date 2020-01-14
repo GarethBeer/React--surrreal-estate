@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import qs from 'qs';
+import PropTypes from 'prop-types';
 import SideBar from './SideBar';
 import PropertyCard from './PropertyCard';
 
@@ -9,9 +10,9 @@ class Properties extends Component {
     super();
     this.state = {
       properties: [],
-      sidebar: false,
+      savedProps: [],
       propSearch: '',
-      alertMessage: '',
+      alertMessage: 'Property has already been added to your favourites',
       isError: false,
     };
   }
@@ -22,6 +23,11 @@ class Properties extends Component {
         properties: data.data,
       });
     });
+    Axios.get('http://localhost:3000/api/v1/Favourite?populate=propertyListing').then(data =>
+      this.setState({
+        savedProps: data.data,
+      }),
+    );
   }
 
   componentDidUpdate(prevProps) {
@@ -69,31 +75,36 @@ class Properties extends Component {
   };
 
   handleSaveProperty = propertyId => {
-    Axios.post('http://localhost:3000/api/v1/Favourite', {
-      propertyListing: propertyId,
-      fbUserId: this.props.userID,
-    }).catch(error => {
-      this.setState({
-        alertMessage: 'Error, property not added',
-        isError: true,
-      });
-    });
-  };
+    const { savedProps } = this.state;
+    const { userID } = this.props;
+    const ids = [];
 
-  handleSidebar = () => {
-    if (!this.state.sidebar) {
+    Axios.get('http://localhost:3000/api/v1/Favourite?populate=propertyListing').then(data =>
       this.setState({
-        sidebar: true,
+        savedProps: data.data,
+      }),
+    );
+
+    savedProps.map(id => ids.push(id.propertyListing._id));
+
+    if (!ids.includes(propertyId)) {
+      Axios.post('http://localhost:3000/api/v1/Favourite', {
+        propertyListing: propertyId,
+        fbUserId: userID,
+      }).catch(error => {
+        this.setState({
+          alertMessage: 'Error, property not added',
+          isError: true,
+        });
       });
     } else {
-      this.setState({
-        sidebar: false,
-      });
+      window.alert(this.state.alertMessage);
     }
   };
 
   render() {
     const { userID } = this.props;
+    const { properties, propSearch } = this.state;
 
     return (
       <section className="properties-page">
@@ -101,15 +112,14 @@ class Properties extends Component {
           <h1>Search Properties...</h1>
         </div>
         <SideBar
-          sidebar={this.state.sidebar}
           buildQuery={this.buildQueryString}
           search={this.handlePropSearch}
           searchInput={this.handleSearchInput}
-          value={this.state.propSearch}
+          value={propSearch}
         />
 
         <div className="property-summaries">
-          {this.state.properties.map(property => (
+          {properties.map(property => (
             <PropertyCard
               key={property._id}
               title={property.title}
@@ -131,3 +141,8 @@ class Properties extends Component {
 }
 
 export default Properties;
+
+Properties.propTypes = {
+  search: PropTypes.string,
+  userID: PropTypes.string,
+};

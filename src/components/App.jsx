@@ -29,30 +29,30 @@ class App extends Component {
       picture: response.picture.data.url,
       accessToken: response.accessToken,
     });
-    console.log(response);
   };
 
   handleLogOut = () => {};
 
   render() {
+    const { userId, isLoggedIn } = this.state;
     return (
-      <div className="App">
+      <main className="App">
         <NavBar onLogin={this.handleLogin} state={this.state} logOut={this.handleLogOut} />
         <Switch>
           <Route
             exact
             path="/"
-            render={props => <Properties {...props} userID={this.state.userId} />}
+            render={props => <Properties {...props} userID={userId} loggedIn={isLoggedIn} />}
           />
           <Route path="/AddProperty" component={AddProperty} />
 
           <Route
             path="/Favourites"
-            render={props => <Favourites {...props} loggedIn={this.state.isLoggedIn} />}
+            render={props => <Favourites {...props} loggedIn={isLoggedIn} />}
           />
         </Switch>
         <Footer />
-      </div>
+      </main>
     );
   }
 }

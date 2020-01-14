@@ -26,7 +26,9 @@ const FavouritesCard = props => {
         <p>{title}</p>
         <div className="email-button">
           <span>{email}</span>
-          <button onClick={() => deletefunc(id)}>delete</button>
+          <button onClick={() => deletefunc(id)} type="button">
+            delete
+          </button>
         </div>
       </div>
       <div className="card-stats">
@@ -63,6 +65,8 @@ FavouritesCard.propTypes = {
   price: PropTypes.number.isRequired,
   city: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  deletefunc: PropTypes.func.isRequired,
 };
 
 export default FavouritesCard;

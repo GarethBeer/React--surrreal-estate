@@ -2,23 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PropertyCard = props => {
-  const {
-    title,
-    type,
-    bathrooms,
-    bedrooms,
-    price,
-    city,
-    email,
-    userID,
-    saveProp,
-    id,
-    button,
-  } = props;
+  const { title, type, bathrooms, bedrooms, price, city, email, userID, saveProp, id } = props;
 
   let saveBtn;
   if (userID) {
-    saveBtn = <button onClick={() => saveProp(id)}>Save</button>;
+    saveBtn = (
+      <button onClick={() => saveProp(id)} type="button">
+        Save
+      </button>
+    );
   }
   return (
     <div className="card">
@@ -28,7 +20,7 @@ const PropertyCard = props => {
       <div className="card-text">
         <span className="date">{type}</span>
         <h2>{city}</h2>
-        <p>{title}</p>
+        <p className="text">{title}</p>
         <div className="email-button">
           <span>{email}</span>
           {saveBtn}
@@ -66,6 +58,9 @@ PropertyCard.propTypes = {
   price: PropTypes.number.isRequired,
   city: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+
+  saveProp: PropTypes.func.isRequired,
 };
 
 export default PropertyCard;
