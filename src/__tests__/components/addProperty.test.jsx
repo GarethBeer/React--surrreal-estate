@@ -43,16 +43,3 @@ test('the input field value is whatever it is written', () => {
 
   expect(input.props().value).toBe('hello');
 });
-
-test('when the button on the form is clicked a function is called', () => {
-  const wrapper = shallow(<AddProperty />);
-  const fakeEvent = { preventDefault: () => console.log('preventDefault') };
-  const handleAddProperty = jest.fn();
-
-  wrapper.find('textarea').simulate('change', {
-    target: { name: 'title', value: 'hello' },
-  });
-  wrapper.find('form').simulate('submit', fakeEvent);
-
-  expect(handleAddProperty).toHaveBeenCalled();
-});

@@ -23,6 +23,7 @@ class AddProperty extends Component {
   }
 
   handleAddProperty = event => {
+    console.log(event);
     event.preventDefault();
     this.setState({
       alertMessage: ' ',
