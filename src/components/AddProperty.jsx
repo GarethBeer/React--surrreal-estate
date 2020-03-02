@@ -104,7 +104,7 @@ class AddProperty extends Component {
               <div className="formItem">
                 <label>No. of Bedrooms</label>
                 <div className="input-icon">
-                  <i className="fas fa-bed" />
+                  <span className="fas fa-bed" />
                   <input
                     type="text"
                     name="bedrooms"
@@ -128,7 +128,7 @@ class AddProperty extends Component {
               <div className="formItem">
                 <label>Property Price </label>
                 <div className="input-icon">
-                  <i className="fas fa-pound-sign" />
+                  <span className="fas fa-pound-sign" />
                   <input
                     type="text"
                     name="price"

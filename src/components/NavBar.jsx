@@ -53,6 +53,6 @@ export default NavBar;
 
 NavBar.propTypes = {
   onLogin: PropTypes.func.isRequired,
-  state: PropTypes.object.isRequired,
+  state: PropTypes.shape.isRequired,
   logOut: PropTypes.func.isRequired,
 };

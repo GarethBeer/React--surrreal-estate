@@ -35,10 +35,11 @@
       padding: 5px;
       width: auto;
       margin: 0;
-      color: rgb(187, 185, 185);
+      color: rgb(185, 187, 186);
       background-color: #252525;
       border-radius: 10px;
       box-shadow: 20px 20px 20px black;
+
       .formItem {
         margin: 3px;
         padding: 5px;
@@ -46,25 +47,30 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        .input-icon {
+          border: 2px solid #252525d7;
+          border-radius: 5%;
+          display: flex;
+          align-items: center;
+          background-color: rgb(220, 218, 218);
+          span {
+            color: #252525d7;
+          }
+        }
       }
-      .input-icon {
-        border: 2px solid #252525d7;
-        border-radius: 5%;
-        display: flex;
-        align-items: center;
-        background-color: rgb(220, 218, 218);
-      }
+
       .item-rows {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
       }
-      .form i {
+      .form span {
         color: #252525d7;
         font-size: 18px;
         border-right: 2px solid #252525d7;
         padding: 2px;
+        background-color: #252525d7;
       }
       input {
         border: none;

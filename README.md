@@ -1,35 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Surreal Estates.
 
-# React Bootstrap
+This was for a task set out by Manchester Codes, the aim was to build a Real Estate website using the React library.
 
-React boilerplate project for Manchester Codes' projects.
+The app has three main pages:
 
-## Getting Started
+Add Property Page - this page contains a form which allows a user to input information such as Location, Type, Price, Bedrooms,Bathrooms and a description of the Property. This information is then saved into a database.
 
-### Clone down this repository (replace `<your_project_name>`:
+Properties Page - this page gathers all properties saved in the database and displays them in the form of a property card. The cards show all the information relating to that property.
 
-```bash
-git clone git@github.com:MCRcodes/react-bootstrap.git <your_project_name>
-```
+Favourites Page - this page is only accessible if a user logs in using their facebook account. Once logged in the user is able to save their favourite properties on the properties page and those saved properties are then rendered on the favourites page. The user is able to delete properties.
 
-### Install dependencies
-
-```bash
-npm install
-```
-
-### Start up the application:
-
-```bash
-npm start
-```
-
-### Visit `localhost:3000` in your browser.
-
-You should see a **Hello World** message.
-
-### Change the rendered output
-
-You can change what is mounted to the DOM in `src/index.js`.
-
-It might be a good idea to make an `App` component inside `App.jsx` (will likely handle your layout and routing), and to mount this to the DOM.
+Pages are all routed using react-router and testing was done using Jest and Enzyme.
